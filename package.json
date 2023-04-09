@@ -4,7 +4,8 @@
   "description": "Transform object keys to lowercase",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine --config=jasmine.json"
+    "test": "jasmine --config=jasmine.json",
+    "prepare": "husky install"
   },
   "keywords": [
     "lowercase",
@@ -14,6 +15,12 @@
   "author": "@pilmee",
   "license": "MIT",
   "devDependencies": {
-    "jasmine": "^3.2.0"
+    "husky": "^8.0.3",
+    "jasmine": "^3.2.0",
+    "lint-staged": "^13.2.1",
+    "prettier": "2.8.7"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
